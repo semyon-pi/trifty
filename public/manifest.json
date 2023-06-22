@@ -1,0 +1,38 @@
+{
+    "name": "Trifty",
+  
+    "short_name": "trifty",
+  
+    "description": "An App For Trifting Items :)",
+  
+    "background_color": "#a600ff",
+  
+    "display": "standalone",
+  
+    "theme_color": "#a600ff",
+  
+    "icons": [
+  
+      {
+  
+        "src": "/assets/icons/icon-192.png",
+  
+        "type": "image/png",
+  
+        "sizes": "192x192"
+  
+      },
+  
+      {
+  
+        "src": "/assets/icons/icon-512.png",
+  
+        "type": "image/png",
+  
+        "sizes": "512x512"
+  
+      }
+  
+    ]
+  
+  }
