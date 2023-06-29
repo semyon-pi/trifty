@@ -12,9 +12,9 @@ const Nav = () => {
     setNavFlag((navFlag) => !navFlag)
   }
   return (
-    <div className='pt-4'>
+    <div className=''>
       <div className='hidden sm:block'>
-        <div className='flex justify-between sm:py-4 sm:px-4 py-4 bg-white drop-shadow-lg mx-4 rounded-lg relative z-30'>
+        <div className='flex justify-between sm:py-4 sm:px-4 py-4 bg-white relative z-30'>
           <NavRightSide />
           <div className='flex flex-row w-88 border rounded mx-4 px-2 py-1'>
             <button className='px-2' type='submit'>

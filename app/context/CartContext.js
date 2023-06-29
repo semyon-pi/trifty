@@ -17,12 +17,23 @@ const CartProvider = ({ children }) => {
 
     // Save cart items to cookies whenever it changes
     useEffect(() => {
-        Cookies.set('cartItems', JSON.stringify(cartItems));
+        Cookies.set('cartItems', JSON.stringify(cartItems), { expires: 7 });
     }, [cartItems]);
 
     // Add item to the cart
     const addToCart = (item) => {
-        setCartItems((prevItems) => [...prevItems, item]);
+        try {
+            const itemExists = cartItems.some((cartItem) => cartItem.id === item.id);
+
+            if (itemExists) {
+                throw new Error("Item already exists in the cart.");
+            }
+
+            setCartItems((prevItems) => [...prevItems, item]);
+            alert('Item was added');
+        } catch (error) {
+            alert(error.message);
+        }
     };
 
     // Remove item from the cart
@@ -30,6 +41,7 @@ const CartProvider = ({ children }) => {
         setCartItems((prevItems) =>
             prevItems.filter((item) => item.id !== itemId)
         );
+
     };
 
     return (

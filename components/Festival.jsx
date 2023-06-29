@@ -292,7 +292,7 @@ const Festival = () => {
           />
         </div>
       </div>
-      <div className='my-4 p-4'>תהיה חלק מהקהילה שמשנה את האופנה.</div>
+      <div className='my-4 p-4'>תהיה חלק מהטרנד שמשנה את האופנה.</div>
     </div>
   )
 }

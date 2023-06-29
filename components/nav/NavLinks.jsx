@@ -2,11 +2,11 @@ import React from 'react'
 
 const NavLinks = () => {
   return (
-    <nav className='flex sm:px-4 py-4  relative z-20'>
-      <div className='dropdown'>
-        <label tabIndex={0} className='my-1 ml-1 btn bg-white drop-shadow-2xl'>
+    <nav className='flex sm:px-4  relative z-20 border-y'>
+      <div className='dropdown gap'>
+        <button tabIndex={0} className='my-1 ml-8 font-bold'>
           לגבר
-        </label>
+        </button>
         <ul
           tabIndex={0}
           className='p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52'
@@ -39,9 +39,9 @@ const NavLinks = () => {
       </div>
 
       <div className='dropdown'>
-        <label tabIndex={0} className='my-1 ml-1 btn bg-white drop-shadow-2xl'>
+        <button tabIndex={0} className='my-1 ml-1 ml-8 font-bold'>
           לאישה
-        </label>
+        </button>
 
         <ul className='p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52'>
           <li>
@@ -78,9 +78,9 @@ const NavLinks = () => {
       </div>
 
       <div className='dropdown'>
-        <label tabIndex={0} className='my-1 ml-1 btn bg-white drop-shadow-2xl'>
+        <button tabIndex={0} className='my-1 ml-1 ml-8 font-bold'>
           תכשיטים
-        </label>
+        </button>
         <ul
           tabIndex={0}
           className='p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52'
@@ -110,9 +110,9 @@ const NavLinks = () => {
       </div>
 
       <div className='dropdown'>
-        <label tabIndex={0} className='my-1 ml-1 btn bg-white drop-shadow-2xl'>
+        <button tabIndex={0} className='my-1 ml-1 ml-8 font-bold'>
           טיפוח
-        </label>
+        </button>
         <ul
           tabIndex={0}
           className='p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52'
@@ -142,9 +142,9 @@ const NavLinks = () => {
       </div>
 
       <div className='dropdown'>
-        <label tabIndex={0} className='my-1 ml-1 btn bg-white drop-shadow-2xl'>
+        <button tabIndex={0} className='my-1 ml-1 ml-8 font-bold'>
           מותגים
-        </label>
+        </button>
         <ul
           tabIndex={0}
           className='p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52'
@@ -171,9 +171,9 @@ const NavLinks = () => {
       </div>
 
       <div className='dropdown'>
-        <label tabIndex={0} className='my-1 ml-1 btn bg-white drop-shadow-2xl'>
+        <button tabIndex={0} className='my-1 ml-1 ml-8 font-bold'>
           עוד
-        </label>
+        </button>
         <ul
           tabIndex={0}
           className='p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52'

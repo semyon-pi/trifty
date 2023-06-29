@@ -201,7 +201,7 @@ const SearchParams = () => {
         <select id='SortBy' className='h-10 rounded border-gray-300 text-sm'>
           <option>מיין לפי</option>
           <option value='Title, DESC'>חדשים</option>
-          <option value='Title, ASC'>הכי נצפים</option>
+          <option value='Title, ASC'>פופולריים</option>
           <option value='Price, DESC'>מחיר, נמוך לגבוהה</option>
           <option value='Price, ASC'>מחיר, גבוהה לנמוך</option>
         </select>

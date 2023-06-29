@@ -1,5 +1,5 @@
 'use client'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 
 const defaultFormFields = {
@@ -13,6 +13,8 @@ const defaultFormFields = {
 const Register = () => {
   const [formFields, setFormFields] = useState(defaultFormFields)
   const { username, email, password, confirmPassword, dateOfBirth } = formFields
+
+  const router = useRouter()
 
   const handleSubmit = async (e) => {
     e.preventDefault()

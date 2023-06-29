@@ -4,7 +4,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='flex justify-center'>
-      <div className='overflow-hidden flex justify-between px-4 my-8 py-2 border lg:visible invisible w-5/6 rounded-lg bg-white drop-shadow-2xl'>
+      <div className='overflow-hidden flex justify-between px-4 py-2 border lg:visible invisible w-full'>
         <nav>
           <Link className='pl-2' href={'/sustainability'}>
             קַיָּמוּת

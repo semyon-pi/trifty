@@ -2,7 +2,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '@app/context/CartContext'
 import Image from 'next/image'
-import getItems from '@lib/getItem'
+import useSWR from 'swr'
 
 export async function generateMetadata({ params }) {
   const item = await getItems(params.id)
@@ -13,16 +13,25 @@ export async function generateMetadata({ params }) {
 }
 
 const Product = ({ params }) => {
-  const data = getItems(params.id)
-
   const { addToCart } = useContext(CartContext)
 
-  const handleAddToCart = () => {
+  const fetcher = (...args) => fetch(...args).then((res) => res.json())
+
+  const { data, error, isLoading } = useSWR(
+    `http://localhost:3000/items/${params.id}`,
+    fetcher
+  )
+
+  if (error) return <div>failed to load</div>
+  if (isLoading) return <div>loading...</div>
+
+  const handleAddToCart = (e) => {
+    e.preventDefault()
     addToCart(data)
   }
 
   return (
-    <section>
+    <section className='h-screen'>
       <div className='relative mx-auto max-w-screen-xl px-4 py-8'>
         <div>
           <h1 className='text-2xl font-bold lg:text-3xl'>{data.title}</h1>
