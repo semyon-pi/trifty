@@ -25,26 +25,6 @@ const UserInfo = () => {
         </div>
         <div className='form-control'>
           <label className='label'>
-            <span className='label-text'>שם משתמש</span>
-          </label>
-          <input
-            type='text'
-            placeholder='המגניב34'
-            className='input input-bordered'
-          />
-        </div>
-        <div className='form-control'>
-          <label className='label'>
-            <span className='label-text'>שם פרטי ושם משפחה</span>
-          </label>
-          <input
-            type='text'
-            placeholder='אלכס כוהן'
-            className='input input-bordered'
-          />
-        </div>
-        <div className='form-control'>
-          <label className='label'>
             <span className='label-text'>מדיה חברתית</span>
           </label>
           <input
@@ -57,14 +37,15 @@ const UserInfo = () => {
           <label className='label'>
             <span className='label-text'>ביו: משהו שתרצה לשתף</span>
           </label>
-          <input type='text' placeholder='' className='input input-bordered' />
+          <textarea
+            type='text'
+            placeholder=''
+            className='input input-bordered'
+          />
         </div>
         <div className='form-control mt-6 flex flex-row justify-between'>
           <button className='font-bold text-indigo-400 btn-outline btn btn-circle'>
             עדכן
-          </button>
-          <button className='font-bold text-red-400 btn-outline btn btn-circle'>
-            בטל
           </button>
         </div>
       </div>

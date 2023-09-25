@@ -6,10 +6,7 @@ import WishList from './WishList'
 import NavButtonsSign from './NavButtonsSign'
 
 const NavRightSide = () => {
-  const { isAuthenticated, userData } = useContext(UserContext)
-
-  console.log(userData)
-
+  const { isAuthenticated } = useContext(UserContext)
   return (
     <div>
       <div className='flex flex-row'>

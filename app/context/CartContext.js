@@ -6,6 +6,7 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
+    const [msg, setMsg] = useState('');
 
     // Load cart items from cookies on component mount
     useEffect(() => {
@@ -26,13 +27,13 @@ const CartProvider = ({ children }) => {
             const itemExists = cartItems.some((cartItem) => cartItem.id === item.id);
 
             if (itemExists) {
-                throw new Error("Item already exists in the cart.");
+                throw new Error("הפריט כבר קיים בעגלה");
             }
 
             setCartItems((prevItems) => [...prevItems, item]);
-            alert('Item was added');
+            setMsg('הפריט נוסף לעגלה');
         } catch (error) {
-            alert(error.message);
+            setMsg(error.message);
         }
     };
 
@@ -47,6 +48,7 @@ const CartProvider = ({ children }) => {
     return (
         <CartContext.Provider
             value={{
+                msg,
                 cartItems,
                 addToCart,
                 removeFromCart,

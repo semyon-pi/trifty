@@ -28,7 +28,7 @@ const NavUser = () => {
           <Link href='/profile/user-info'>פרופיל</Link>
         </li>
         <li>
-          <Link href='/dashboard'>חנות אישית</Link>
+          <Link href='/dashboard/my-items'>חנות אישית</Link>
         </li>
         <li>
           <a onClick={logout}>התנתקות</a>

@@ -1,37 +1,51 @@
 'use client'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '@app/context/CartContext'
-import Image from 'next/image'
-import useSWR from 'swr'
-
-export async function generateMetadata({ params }) {
-  const item = await getItems(params.id)
-  return {
-    title: item.title,
-    description: item.desc,
-  }
-}
+import getItemById from '@lib/getItem' // Use the correct import name
+import Alert from '@components/Alert'
 
 const Product = ({ params }) => {
-  const { addToCart } = useContext(CartContext)
+  const { msg, addToCart } = useContext(CartContext)
+  const [isAddedToCart, setIsAddedToCart] = useState(false)
+  const [data, setData] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState(null)
 
-  const fetcher = (...args) => fetch(...args).then((res) => res.json())
+  useEffect(() => {
+    const fetchItem = async () => {
+      try {
+        const response = await getItemById(params.id) // Use the correct function name
+        setData(response)
+        setIsLoading(false)
+      } catch (error) {
+        setError(error)
+        setIsLoading(false)
+      }
+    }
 
-  const { data, error, isLoading } = useSWR(
-    `http://localhost:3000/items/${params.id}`,
-    fetcher
-  )
-
-  if (error) return <div>failed to load</div>
-  if (isLoading) return <div>loading...</div>
+    fetchItem()
+  }, [params.id])
 
   const handleAddToCart = (e) => {
     e.preventDefault()
     addToCart(data)
+    setIsAddedToCart(true)
+    setTimeout(() => {
+      setIsAddedToCart(false)
+    }, 3000) // 3000 milliseconds (3 seconds)
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>
   }
 
   return (
     <section className='h-screen'>
+      {isAddedToCart && <Alert title={data.title} message={msg} />}
       <div className='relative mx-auto max-w-screen-xl px-4 py-8'>
         <div>
           <h1 className='text-2xl font-bold lg:text-3xl'>{data.title}</h1>

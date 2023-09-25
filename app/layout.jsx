@@ -4,6 +4,7 @@ import '@styles/globals.css'
 import { children } from 'react'
 import { UserProvider } from './context/UserContext'
 import { CartProvider } from './context/CartContext'
+import { ShopProvider } from './context/ShopContext'
 
 export const metadata = {
   title: 'Trifty',
@@ -16,11 +17,13 @@ const RootLayout = ({ children }) => {
       <body>
         <UserProvider>
           <CartProvider>
-            <main className='app '>
-              <Nav />
-              {children}
-              <Footer />
-            </main>
+            <ShopProvider>
+              <main className='app '>
+                <Nav />
+                {children}
+                <Footer />
+              </main>
+            </ShopProvider>
           </CartProvider>
         </UserProvider>
       </body>

@@ -1,9 +1,11 @@
+'use client'
 import Link from 'next/link'
 import React from 'react'
+import withAuth from '@app/auth/withAuth'
 
 const Template = ({ children }) => {
   return (
-    <div className='bg-gradient-to-r from-red-50 to-blue-100 hero'>
+    <div className='hero'>
       <div className='hero-content flex-col'>
         <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 rounded-none rounded-t-2xl'>
           <div className='card-body'>
@@ -36,4 +38,4 @@ const Template = ({ children }) => {
   )
 }
 
-export default Template
+export default withAuth(Template)

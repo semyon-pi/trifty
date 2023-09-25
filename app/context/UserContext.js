@@ -6,9 +6,10 @@ import { useRouter } from 'next/navigation'
 
 // Create the UserContext
 const UserContext = createContext({
+    loading: true,
     user: null,
     userData: null,
-    isAuthenticated: false,
+    isAuthenticated: null,
     login: () => { },
     logout: () => { },
 });
@@ -19,7 +20,8 @@ const useUserContext = () => useContext(UserContext);
 const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [userData, setUserData] = useState(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(null);
+    const [loading, setLoading] = useState(true);
     const router = useRouter()
 
 
@@ -100,6 +102,7 @@ const UserProvider = ({ children }) => {
             if (response.ok) {
                 const userData = await response.json();
                 setUserData(userData);
+                setLoading(false)
             } else {
                 throw new Error('Failed to retrieve user by ID');
             }
@@ -109,7 +112,7 @@ const UserProvider = ({ children }) => {
     };
 
     return (
-        <UserContext.Provider value={{ user, userData, isAuthenticated, login, logout }}>
+        <UserContext.Provider value={{ loading, user, userData, isAuthenticated, login, logout }}>
             {children}
         </UserContext.Provider>
     );

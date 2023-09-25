@@ -9,13 +9,13 @@ const withAuth = (WrappedComponent) => {
     const router = useRouter()
 
     useEffect(() => {
-      if (!isAuthenticated) {
+      if (isAuthenticated === false) {
         router.push('/login')
       }
-    }, [])
+    }, [isAuthenticated]) // Include isAuthenticated as a dependency
 
-    if (!isAuthenticated) {
-      return <div>Loading...</div>
+    if (isAuthenticated === null) {
+      return <div className='h-screen'>Loading...</div>
     }
     return <WrappedComponent {...props} />
   }

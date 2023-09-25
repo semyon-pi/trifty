@@ -35,16 +35,250 @@ const Nav = () => {
             />
           </div>
 
-          <Link href={'/'}>
-            <div className='text-red-600 font-bold '>Trifty</div>
+          <Link href={'/'} dir='ltr'>
+            <svg
+              width='44%'
+              height='100%'
+              viewBox='0 0 753 271'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <line
+                x1='25'
+                y1='37'
+                x2='125.003'
+                y2='37'
+                stroke='#C96545'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='410.279'
+                y1='34.0864'
+                x2='459.519'
+                y2='25.404'
+                stroke='#4553C9'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='229.151'
+                y1='112.849'
+                x2='250.801'
+                y2='100.349'
+                stroke='#040826'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='389'
+                y1='137'
+                x2='439'
+                y2='137'
+                stroke='#040B4D'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='75'
+                y1='197.003'
+                x2='75'
+                y2='96.9996'
+                stroke='#DBFB1A'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='175'
+                y1='197.003'
+                x2='175'
+                y2='97'
+                stroke='#0A21F1'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='315'
+                y1='197.003'
+                x2='315'
+                y2='97'
+                stroke='#07148F'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='415'
+                y1='197.003'
+                x2='415'
+                y2='97'
+                stroke='#050B45'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='497'
+                y1='97'
+                x2='547'
+                y2='97'
+                stroke='#381C01'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='522.5'
+                y1='197.001'
+                x2='522.5'
+                y2='61.9987'
+                stroke='#C94545'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='602.151'
+                y1='61.1506'
+                x2='627.151'
+                y2='104.452'
+                stroke='#007930'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <line
+                x1='621.255'
+                y1='236.668'
+                x2='718.219'
+                y2='61.745'
+                stroke='#015327'
+                stroke-width='50'
+                stroke-linecap='round'
+              />
+              <circle cx='315' cy='37' r='25' fill='#D91D1D' />
+            </svg>
           </Link>
         </div>
         <NavLinks />
       </div>
       <div className='sm:hidden'>
-        <div className='flex justify-between px-4 py-2 rounded-lg bg-white mx-4 drop-shadow-md'>
+        <div className='flex justify-between px-4 py-2  bg-white my-2'>
           <div className='text-red-600 font-bold'>
-            <Link href={'/'}>Trifty</Link>
+            <Link href={'/'}>
+              <svg
+                width='40%'
+                height='100%'
+                viewBox='0 0 753 271'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <line
+                  x1='25'
+                  y1='37'
+                  x2='125.003'
+                  y2='37'
+                  stroke='#C96545'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='410.279'
+                  y1='34.0864'
+                  x2='459.519'
+                  y2='25.404'
+                  stroke='#4553C9'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='229.151'
+                  y1='112.849'
+                  x2='250.801'
+                  y2='100.349'
+                  stroke='#040826'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='389'
+                  y1='137'
+                  x2='439'
+                  y2='137'
+                  stroke='#040B4D'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='75'
+                  y1='197.003'
+                  x2='75'
+                  y2='96.9996'
+                  stroke='#DBFB1A'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='175'
+                  y1='197.003'
+                  x2='175'
+                  y2='97'
+                  stroke='#0A21F1'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='315'
+                  y1='197.003'
+                  x2='315'
+                  y2='97'
+                  stroke='#07148F'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='415'
+                  y1='197.003'
+                  x2='415'
+                  y2='97'
+                  stroke='#050B45'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='497'
+                  y1='97'
+                  x2='547'
+                  y2='97'
+                  stroke='#381C01'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='522.5'
+                  y1='197.001'
+                  x2='522.5'
+                  y2='61.9987'
+                  stroke='#C94545'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='602.151'
+                  y1='61.1506'
+                  x2='627.151'
+                  y2='104.452'
+                  stroke='#007930'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <line
+                  x1='621.255'
+                  y1='236.668'
+                  x2='718.219'
+                  y2='61.745'
+                  stroke='#015327'
+                  stroke-width='50'
+                  stroke-linecap='round'
+                />
+                <circle cx='315' cy='37' r='25' fill='#D91D1D' />
+              </svg>
+            </Link>
           </div>
           <label className='btn btn-circle swap swap-rotate bg-white'>
             <input type='checkbox' checked={navFlag} onChange={toggleOn} />
@@ -75,6 +309,7 @@ const Nav = () => {
             </svg>
           </label>
         </div>
+        <hr />
         <div
           className={
             navFlag
