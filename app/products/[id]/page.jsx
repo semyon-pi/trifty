@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '@app/context/CartContext'
 import getItemById from '@lib/getItem' // Use the correct import name
 import Alert from '@components/Alert'
+import LoadingSpinner from '@components/LoadingSpinner'
 
 const Product = ({ params }) => {
   const { msg, addToCart } = useContext(CartContext)
@@ -36,7 +37,7 @@ const Product = ({ params }) => {
   }
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <LoadingSpinner />
   }
 
   if (error) {
@@ -66,7 +67,7 @@ const Product = ({ params }) => {
                 <legend className='text-lg font-bold'>סוג בד</legend>
 
                 <div className='mt-2 flex flex-wrap gap-1'>
-                  <label for='material_cotton' className='cursor-pointer'>
+                  <label htmlFor='material_cotton' className='cursor-pointer'>
                     <input
                       type='radio'
                       id='material_cotton'
@@ -80,7 +81,7 @@ const Product = ({ params }) => {
                     </span>
                   </label>
 
-                  <label for='material_wool' className='cursor-pointer'>
+                  <label htmlFor='material_wool' className='cursor-pointer'>
                     <input
                       type='radio'
                       id='material_wool'
@@ -111,7 +112,9 @@ const Product = ({ params }) => {
               </div>
 
               <div>
-                <p className='text-xl font-bold'>${data.price}</p>
+                <p dir='ltr' className='text-xl font-bold'>
+                  ₪{data.price}
+                </p>
               </div>
 
               <button
@@ -147,9 +150,9 @@ const Product = ({ params }) => {
                   stroke='currentColor'
                 >
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
                     d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7'
                   />
                 </svg>

@@ -25,7 +25,7 @@ const NavUser = () => {
         className='menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
       >
         <li>
-          <Link href='/profile/user-info'>פרופיל</Link>
+          <Link href='/profile/info'>פרופיל</Link>
         </li>
         <li>
           <Link href='/dashboard/my-items'>חנות אישית</Link>

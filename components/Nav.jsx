@@ -49,8 +49,8 @@ const Nav = () => {
                 x2='125.003'
                 y2='37'
                 stroke='#C96545'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='410.279'
@@ -58,8 +58,8 @@ const Nav = () => {
                 x2='459.519'
                 y2='25.404'
                 stroke='#4553C9'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='229.151'
@@ -67,8 +67,8 @@ const Nav = () => {
                 x2='250.801'
                 y2='100.349'
                 stroke='#040826'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='389'
@@ -76,8 +76,8 @@ const Nav = () => {
                 x2='439'
                 y2='137'
                 stroke='#040B4D'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='75'
@@ -85,8 +85,8 @@ const Nav = () => {
                 x2='75'
                 y2='96.9996'
                 stroke='#DBFB1A'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='175'
@@ -94,8 +94,8 @@ const Nav = () => {
                 x2='175'
                 y2='97'
                 stroke='#0A21F1'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='315'
@@ -103,8 +103,8 @@ const Nav = () => {
                 x2='315'
                 y2='97'
                 stroke='#07148F'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='415'
@@ -112,8 +112,8 @@ const Nav = () => {
                 x2='415'
                 y2='97'
                 stroke='#050B45'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='497'
@@ -121,8 +121,8 @@ const Nav = () => {
                 x2='547'
                 y2='97'
                 stroke='#381C01'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='522.5'
@@ -130,8 +130,8 @@ const Nav = () => {
                 x2='522.5'
                 y2='61.9987'
                 stroke='#C94545'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='602.151'
@@ -139,8 +139,8 @@ const Nav = () => {
                 x2='627.151'
                 y2='104.452'
                 stroke='#007930'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <line
                 x1='621.255'
@@ -148,8 +148,8 @@ const Nav = () => {
                 x2='718.219'
                 y2='61.745'
                 stroke='#015327'
-                stroke-width='50'
-                stroke-linecap='round'
+                strokeWidth='50'
+                strokeLinecap='round'
               />
               <circle cx='315' cy='37' r='25' fill='#D91D1D' />
             </svg>
@@ -174,8 +174,8 @@ const Nav = () => {
                   x2='125.003'
                   y2='37'
                   stroke='#C96545'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='410.279'
@@ -183,8 +183,8 @@ const Nav = () => {
                   x2='459.519'
                   y2='25.404'
                   stroke='#4553C9'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='229.151'
@@ -192,8 +192,8 @@ const Nav = () => {
                   x2='250.801'
                   y2='100.349'
                   stroke='#040826'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='389'
@@ -201,8 +201,8 @@ const Nav = () => {
                   x2='439'
                   y2='137'
                   stroke='#040B4D'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='75'
@@ -210,8 +210,8 @@ const Nav = () => {
                   x2='75'
                   y2='96.9996'
                   stroke='#DBFB1A'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='175'
@@ -219,8 +219,8 @@ const Nav = () => {
                   x2='175'
                   y2='97'
                   stroke='#0A21F1'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='315'
@@ -228,8 +228,8 @@ const Nav = () => {
                   x2='315'
                   y2='97'
                   stroke='#07148F'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='415'
@@ -237,8 +237,8 @@ const Nav = () => {
                   x2='415'
                   y2='97'
                   stroke='#050B45'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='497'
@@ -246,8 +246,8 @@ const Nav = () => {
                   x2='547'
                   y2='97'
                   stroke='#381C01'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='522.5'
@@ -255,8 +255,8 @@ const Nav = () => {
                   x2='522.5'
                   y2='61.9987'
                   stroke='#C94545'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='602.151'
@@ -264,8 +264,8 @@ const Nav = () => {
                   x2='627.151'
                   y2='104.452'
                   stroke='#007930'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <line
                   x1='621.255'
@@ -273,8 +273,8 @@ const Nav = () => {
                   x2='718.219'
                   y2='61.745'
                   stroke='#015327'
-                  stroke-width='50'
-                  stroke-linecap='round'
+                  strokeWidth='50'
+                  strokeLinecap='round'
                 />
                 <circle cx='315' cy='37' r='25' fill='#D91D1D' />
               </svg>

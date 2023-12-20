@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation'
 import { useEffect, useContext } from 'react'
 import { UserContext } from '@app/context/UserContext'
+import LoadingSpinner from '@components/LoadingSpinner'
 
 const withAuth = (WrappedComponent) => {
   const AuthenticatedComponent = (props) => {
@@ -15,7 +16,7 @@ const withAuth = (WrappedComponent) => {
     }, [isAuthenticated]) // Include isAuthenticated as a dependency
 
     if (isAuthenticated === null) {
-      return <div className='h-screen'>Loading...</div>
+      return <LoadingSpinner />
     }
     return <WrappedComponent {...props} />
   }

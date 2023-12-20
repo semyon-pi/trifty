@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Template = ({ children }) => {
   return (
-    <div className='flex justify-center h-screen'>
+    <div className='flex justify-center h-full'>
       <div className='my-8 grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 border'>
         <div className='bg-white flex-none lg:col-span-1'>
           <div className='relative bg-white dark:bg-gray-800'>
@@ -78,7 +78,7 @@ const Template = ({ children }) => {
                       width='20'
                       height='20'
                       fill='currentColor'
-                      class='m-auto'
+                      className='m-auto'
                       viewBox='0 0 2048 1792'
                       xmlns='http://www.w3.org/2000/svg'
                     >

@@ -12,19 +12,19 @@ const Template = ({ children }) => {
             <h2 className='pb-2 text-neutral font-bold'>פרופיל</h2>
             <div className='flex'>
               <Link
-                href={'/profile/user-info'}
+                href={'/profile/info'}
                 className='rounded-none rounded-r-xl btn btn-neutral btn-sm text-white px-6'
               >
                 פרטים
               </Link>
               <Link
-                href={'/profile/user-address'}
+                href={'/profile/address'}
                 className='rounded-none btn btn-neutral btn-sm text-white px-6'
               >
                 כתובת
               </Link>
               <Link
-                href={'/profile/user-settings'}
+                href={'/profile/settings'}
                 className='rounded-none rounded-l-lg btn btn-neutral btn-sm text-white px-6'
               >
                 הגדרות

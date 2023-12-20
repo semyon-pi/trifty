@@ -26,7 +26,7 @@ async function checkUserShippingInfo(userId) {
 }
 
 const UserAddress = () => {
-  const { user } = useContext(UserContext)
+  const { userData } = useContext(UserContext)
   const [shippingInfoUpdated, setShippingInfoUpdated] = useState(false)
   const [shippingInfoExists, setShippingInfoExists] = useState(false)
   const [shippingInfo, setShippingInfo] = useState({
@@ -49,7 +49,7 @@ const UserAddress = () => {
   useEffect(() => {
     async function fetchUserShippingInfo() {
       try {
-        const userShippingInfo = await checkUserShippingInfo(user.userId)
+        const userShippingInfo = await checkUserShippingInfo(userData.id)
         if (userShippingInfo) {
           setShippingInfo(userShippingInfo)
           setShippingInfoExists(true)
@@ -57,14 +57,14 @@ const UserAddress = () => {
           setShippingInfoExists(false)
           setShippingInfo({
             ...shippingInfo, // Spread the existing properties
-            userId: user.userId,
+            userId: userData.id,
           })
         }
       } catch (error) {}
     }
 
     fetchUserShippingInfo()
-  }, [user])
+  }, [userData])
 
   const handleSubmit = async (e) => {
     e.preventDefault()

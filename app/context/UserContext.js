@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation'
 // Create the UserContext
 const UserContext = createContext({
     loading: true,
-    user: null,
     userData: null,
     isAuthenticated: null,
     login: () => { },
@@ -18,7 +17,6 @@ const UserContext = createContext({
 const useUserContext = () => useContext(UserContext);
 // Create the UserProvider component to wrap your app with the UserContext
 const UserProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
     const [userData, setUserData] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -38,7 +36,7 @@ const UserProvider = ({ children }) => {
         Cookies.set('jwtToken', token, { expires: 7 }); // Set the cookie to expire after 7 days
         try {
             const userData = await verifyTokenAndRetrieveUserInfo(token);
-            setUser(userData);
+            setUserData(userData);
             setIsAuthenticated(true);
         } catch (error) {
             console.error(error);
@@ -47,7 +45,7 @@ const UserProvider = ({ children }) => {
 
     const logout = () => {
         Cookies.remove('jwtToken');
-        setUser(null);
+        setUserData(null);
         setIsAuthenticated(false);
         router.push('/')
     };
@@ -55,7 +53,7 @@ const UserProvider = ({ children }) => {
     const verifyTokenAndRetrieveUserInfo = async (token) => {
         try {
             const userData = await fetchUserInfo(token);
-            setUser(userData);
+            setUserData(userData);
             setIsAuthenticated(true);
             const { userId } = userData
             fetchUserById(token, userId)
@@ -112,7 +110,7 @@ const UserProvider = ({ children }) => {
     };
 
     return (
-        <UserContext.Provider value={{ loading, user, userData, isAuthenticated, login, logout }}>
+        <UserContext.Provider value={{ loading, userData, isAuthenticated, login, logout }}>
             {children}
         </UserContext.Provider>
     );
